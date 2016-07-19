@@ -1,36 +1,34 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+'use strict';
 
-import React, { Component } from 'react';
-import {
+var React = require('react-native');
+var {
   AppRegistry,
   StyleSheet,
   Text,
-  View
-} from 'react-native';
+  View,
+} = React;
 
-class SLReact extends Component {
-  render() {
+var SampleApp = React.createClass({
+  render: function() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Situation Line
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.android.js
+          New Game
         </Text>
+
         <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
+          Credits
         </Text>
+
       </View>
     );
   }
-}
+});
 
-const styles = StyleSheet.create({
+var styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -38,15 +36,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 28,
     textAlign: 'center',
     margin: 10,
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
+    fontSize: 19,
     marginBottom: 5,
   },
 });
 
-AppRegistry.registerComponent('SLReact', () => SLReact);
+AppRegistry.registerComponent('SampleApp', () => SampleApp);
